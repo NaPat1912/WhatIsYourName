@@ -9,7 +9,27 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    //Explicit
+    var nameString: String = "<#value#>"
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBAction func ChangeButton(_ sender: Any) {
+        //Get valus From TextField
+        nameString  = nameTextField.text!
+//        Show Log
+        print("name = \(nameString)")
+        
+//        Show Name on label
+        nameLabel.text = nameString
+        nameTextField.text = ""
+    
+    }
+//    }นี่คือ change button
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
